@@ -1,5 +1,7 @@
 ﻿
 //fibonacci series
+using System.Net;
+
 static void ShowFibonacciSeriesNumber(int level)
 {
     int firstNumber = 0;
@@ -74,8 +76,43 @@ static int ReverseNumber(int n){
 // Console.WriteLine(a);
 
 
+//Abundant number
+static bool IsAbundant(int number){
+int sum=0;
+for(int i=1; i<number; i++){
+  if(number%i==0){
+    sum+=number;
+  }
+  if(sum>number){
+    return true;
+  }
+}
+return false;
+}
+
+// bool status=IsAbundant(2);
+// Console.WriteLine(status);
 
 
 
+static bool PrimeOrNot(int a)
+{
+    int i;
+    bool isPrime = true;
+    if (a == 0 || a == 1)
+    {
+        isPrime = false;
+    }
+    for (i = 2; i <= a / 2; ++i)
+    {
+        if (a % i == 0)
+        {
+            isPrime = false;
+            break;
+        }
+    }
+    return isPrime;
+}
 
-
+// bool status=PrimeOrNot(12);
+// Console.WriteLine(status);
