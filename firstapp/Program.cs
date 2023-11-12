@@ -116,3 +116,33 @@ static bool PrimeOrNot(int a)
 
 // bool status=PrimeOrNot(12);
 // Console.WriteLine(status);
+
+
+
+// quadrants in which a given coordinates lies
+
+static void quadrants(int x,int y){
+if(x>0 && y>0){
+   Console.WriteLine("point: " + x +"," +y+" lies in the first quadrant");
+}
+else if(x<0 && y>0){
+   Console.WriteLine("point: " + x +"," +y+" lies in the second quadrant");
+}
+else if(x<0 && y<0){
+   Console.WriteLine("point: " + x +"," +y+" lies in the third quadrant");
+}
+else if(x>0 && y<0){
+   Console.WriteLine("point: " + x +"," +y+" lies in the forth quadrant");
+}
+else if(x==0 && y==0){
+   Console.WriteLine("point: " + x +"," +y+" lies in origin");
+}
+else if(x!=0 && y==0){
+   Console.WriteLine("point: " + x +"," +y+" lies in x-axis");
+}
+else if(x==0 && y!=0){
+   Console.WriteLine("point: " + x +"," +y+" lies in y-axis");
+}
+}
+// int o=quadrants(1,2);
+// Console.WriteLine(o);
