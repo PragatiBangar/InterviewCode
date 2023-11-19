@@ -146,3 +146,33 @@ else if(x==0 && y!=0){
 }
 // int o=quadrants(1,2);
 // Console.WriteLine(o);
+
+
+
+static int HCF(int number1,int number2){
+//Highest Common Factor(HCF)
+
+int num1 = 12;
+int num2 = 36;
+int HCF = 1;
+
+for(int i=1; i<=num1 && i<=num2; i++ ){
+    if(num1%i==0 && num2%i==0){
+        HCF=i;
+    }
+  }
+}
+Console.WriteLine(HCF);
+
+// get count of digits
+static int GetCountOfDigits(int number){
+int digit=0;
+   while(number>0){
+    digit++;
+    number=number/10;
+}
+    return digit;
+}
+
+int pb = GetCountOfDigits(12);
+Console.WriteLine(pb);
